@@ -10,7 +10,7 @@
   font-size: 12px;
   line-height: 18px;
   font-weight: 300;
-  min-width: 400px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
 
@@ -22,6 +22,24 @@
   @media (min-width: $desktop-width) {
     font-size: 16px;
     line-height: 24px;
+  }
+
+  @media (width <= $desktop-width) {
+    &--overlay {
+      overflow: hidden;
+    }
+
+    &--overlay::after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 2;
+      background-color: rgba(45, 56, 63, 0.6);
+    }
   }
 }
 

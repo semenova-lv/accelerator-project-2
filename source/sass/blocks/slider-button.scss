@@ -1,0 +1,59 @@
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 37px;
+  height: 35px;
+
+  border: none;
+  background-color: $basic-secondary;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 14px;
+    height: 9px;
+    mask-image: url("/__spritemap#sprite-icon-arrow-view");
+    mask-repeat: no-repeat;
+    mask-size: 14px 9px;
+    mask-position: center;
+    background-color: $white;
+  }
+
+  &--next::before {
+    transform: rotate(180deg);
+  }
+
+  &:not(:disabled):hover {
+    outline: 1px solid $basic-accent;
+    outline-offset: -1px;
+    background-color: $white;
+  }
+
+  &:not(:disabled):hover::before {
+    background-color: $basic-accent;
+  }
+
+  &:not(:disabled):focus-visible {
+    outline: none;
+    background-color: $white;
+  }
+
+  &:not(:disabled):focus-visible::before {
+    background-color: $basic-accent;
+  }
+
+  &:not(:disabled):active {
+    background-color: $basic-accent;
+  }
+
+  &:not(:disabled):active::before {
+    background-color: $white;
+  }
+
+  &:disabled {
+    background-color: $color-disabled;
+  }
+}

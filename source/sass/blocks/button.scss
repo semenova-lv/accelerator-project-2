@@ -1,0 +1,43 @@
+.button {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+
+  &--primary {
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 500;
+    padding: 20px;
+    background-color: $basic-secondary;
+  }
+
+  &--primary:not(:disabled):hover {
+    outline: 1px solid $basic-accent;
+    outline-offset: -1px;
+    background-color: $white;
+    color: $basic-accent;
+  }
+
+  &--primary:not(:disabled):focus-visible {
+    outline: none;
+    background-color: $white;
+    color: $basic-accent;
+  }
+
+  &--primary:not(:disabled):active {
+    outline: none;
+    background-color: $basic-accent;
+    color: $white;
+  }
+
+  &--primary:disabled,
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+    background-color: $color-disabled;
+    color: $white;
+  }
+}

@@ -36,13 +36,10 @@
   text-transform: uppercase;
   display: block;
   padding-block: 11px;
-
-  // padding-inline: calc((100% - 290px) / 2);
   width: fit-content;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    // padding-inline: calc((100% - 678px) / 2);
     padding-block: 13px;
     font-size: 16px;
     line-height: 16px;

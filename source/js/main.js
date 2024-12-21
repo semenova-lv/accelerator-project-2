@@ -48,6 +48,32 @@ const toursSlider = new Swiper('.tours__slider', {
   },
 });
 
+const trainersSlider = new Swiper('.training__slider', {
+  modules: [Navigation, Pagination],
+  // slidesPerView: 'auto',
+
+  navigation: {
+    nextEl: '.training__button--next',
+    prevEl: '.training__button--prev'
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      initialSlide: 2,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 20,
+    },
+    1440: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    }
+  },
+});
+
 
 heroSlider.init();
 toursSlider.init();
+trainersSlider.init();

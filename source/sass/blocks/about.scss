@@ -5,13 +5,13 @@
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
-    padding-block: 43px 40px;
+    padding-block: 40px;
     padding-inline: calc((100% - 768px) / 2) calc((100% - 678px) / 2);
     grid-template-columns: 450px 270px;
   }
 
   @media (min-width: $desktop-width) {
-    padding-block: 102px 100px;
+    padding-block: 100px;
     padding-inline: calc((100% - 1440px) / 2) calc((100% - 1200px) / 2);
     grid-template-columns: 1fr 1fr;
   }
@@ -58,7 +58,7 @@
     @media (min-width: $tablet-width) {
       font-size: 25px;
       line-height: 25px;
-      margin-bottom: 38px;
+      margin-bottom: 36px;
       padding-block: 20px 10px;
     }
 
@@ -101,10 +101,6 @@
     flex-direction: column;
     row-gap: 25px;
 
-    @media (min-width: $tablet-width) {
-      row-gap: 28px;
-    }
-
     @media (min-width: $desktop-width) {
       row-gap: 30px;
     }
@@ -120,7 +116,7 @@
     @media (min-width: $tablet-width) {
       font-size: 18px;
       line-height: 18px;
-      margin-bottom: 11px;
+      margin-bottom: 15px;
     }
 
     @media (min-width: $desktop-width) {

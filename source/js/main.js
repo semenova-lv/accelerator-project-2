@@ -73,7 +73,28 @@ const trainersSlider = new Swiper('.training__slider', {
   },
 });
 
+const reviewsSlider = new Swiper('.reviews__slider', {
+  modules: [Navigation],
+  slidesPerView: 'auto',
+  spaceBetween: 50,
+
+  navigation: {
+    nextEl: '.reviews__button--next',
+    prevEl: '.reviews__button--prev'
+  },
+
+  breakpoints: {
+    768: {
+      spaceBetween: 30,
+    },
+    1440: {
+      spaceBetween: 120,
+    }
+  },
+});
+
 
 heroSlider.init();
 toursSlider.init();
 trainersSlider.init();
+reviewsSlider.init();

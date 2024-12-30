@@ -93,8 +93,29 @@ const reviewsSlider = new Swiper('.reviews__slider', {
   },
 });
 
+const advantagesSlider = new Swiper('.advantages__slider', {
+  modules: [Navigation],
+  enabled: false,
+  breakpoints: {
+    1440: {
+      loop: true,
+      enabled: true,
+      spaceBetween: 30,
+      slidesPerGroup: 2,
+      initialSlide: 2,
+      slidesPerView: 'auto',
+      centeredSlides: true,
+      navigation: {
+        nextEl: '.advantages__button--next',
+        prevEl: '.advantages__button--prev'
+      },
+    },
+  },
+});
+
 
 heroSlider.init();
 toursSlider.init();
 trainersSlider.init();
 reviewsSlider.init();
+advantagesSlider.init();

@@ -113,9 +113,33 @@ const advantagesSlider = new Swiper('.advantages__slider', {
   },
 });
 
+const gallerySlider = new Swiper('.gallery__slider', {
+  modules: [Navigation, Pagination],
+  loop: true,
+
+  navigation: {
+    nextEl: '.gallery__button--next',
+    prevEl: '.gallery__button--prev'
+  },
+
+  breakpoints: {
+    320: {
+      slidesPerView: 2,
+      spaceBetween: 5,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 5,
+    },
+    1440: {
+      enabled: false,
+    }
+  },
+});
 
 heroSlider.init();
 toursSlider.init();
 trainersSlider.init();
 reviewsSlider.init();
 advantagesSlider.init();
+gallerySlider.init();

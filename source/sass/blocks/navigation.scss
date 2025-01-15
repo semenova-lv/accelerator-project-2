@@ -52,7 +52,7 @@
   display: none;
 
   &--open {
-    display: block;
+    display: flex;
   }
 
   @media (min-width: $desktop-width) {

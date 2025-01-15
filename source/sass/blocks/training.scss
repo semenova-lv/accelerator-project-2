@@ -306,9 +306,10 @@
     display: block;
     width: 25px;
     height: 25px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: $additional-accent;
 
     @media (min-width: $tablet-width) {
       justify-self: center;
@@ -316,19 +317,19 @@
   }
 
   &--map::before {
-    background-image: url("/__spritemap#sprite-icon-map-view");
+    mask-image: url("/__spritemap#sprite-icon-map-view");
   }
 
   &--boots::before {
-    background-image: url("/__spritemap#sprite-icon-boots-view");
+    mask-image: url("/__spritemap#sprite-icon-boots-view");
   }
 
   &--tree::before {
-    background-image: url("/__spritemap#sprite-icon-forest-view");
+    mask-image: url("/__spritemap#sprite-icon-forest-view");
   }
 
   &--mountain::before {
-    background-image: url("/__spritemap#sprite-icon-mountains-view");
+    mask-image: url("/__spritemap#sprite-icon-mountains-view");
   }
 
   br {

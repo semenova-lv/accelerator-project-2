@@ -37,6 +37,7 @@
 .footer-navigation__link {
   color: inherit;
   text-decoration: none;
+  position: relative;
 
   @media (min-width: $tablet-width) {
     padding-right: 5px;
@@ -44,5 +45,62 @@
 
   @media (min-width: $desktop-width) {
     padding-right: 0;
+  }
+
+  &:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: -3px;
+    height: 1px;
+    background-color: currentColor;
+
+    @media (min-width: $tablet-width) {
+      right: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -5px;
+    }
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: -3px;
+    top: -3px;
+    outline: 1px solid $additional-accent;
+    outline-offset: -1px;
+
+    @media (min-width: $tablet-width) {
+      right: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+      right: -5px;
+    }
+  }
+
+  &:active {
+    color: $basic-secondary;
+  }
+
+  &:active::after {
+    display: none;
+  }
+
+  &--disabled {
+    color: $color-disabled;
+    cursor: default;
+    pointer-events: none;
   }
 }

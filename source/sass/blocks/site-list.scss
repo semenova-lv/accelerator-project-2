@@ -1,9 +1,12 @@
 .site-list {
   background-color: $basic-secondary;
-  padding-block: 2px 39px;
+  padding-block: 30px 50px;
+  flex-direction: column;
+  row-gap: 22px;
 
   @media (min-width: $tablet-width) {
-    padding-block: 18px 56px;
+    padding-block: 50px 70px;
+    row-gap: 26px;
   }
 
   @media (min-width: $desktop-width) {
@@ -35,12 +38,10 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   display: block;
-  padding-block: 11px;
   width: fit-content;
   position: relative;
 
   @media (min-width: $tablet-width) {
-    padding-block: 13px;
     font-size: 16px;
     line-height: 16px;
   }
@@ -51,42 +52,45 @@
     letter-spacing: 0;
   }
 
-  &:hover {
-    padding-inline: 5px;
-
-    @media (min-width: $desktop-width) {
-      padding-inline: 0;
-    }
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    top: -10px;
   }
 
   &:hover::after {
     content: "";
     display: block;
     position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: -3px;
     height: 1px;
     background-color: currentColor;
-    bottom: 9px;
-    right: 0;
-    left: 0;
-
-    @media (min-width: $desktop-width) {
-      left: -5px;
-      right: -5px;
-    }
   }
 
   &:focus-visible {
-    padding-inline: 5px;
-    outline: 1px solid $white;
+    outline: none;
+  }
 
-    @media (min-width: $desktop-width) {
-      padding-inline: 0;
-    }
+  &:focus-visible::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: -3px;
+    top: -3px;
+    outline: 1px solid currentColor;
+    outline-offset: -1px;
   }
 
   &:active {
     color: $basic-accent;
-    padding-inline: 0;
   }
 
   &:active::after {

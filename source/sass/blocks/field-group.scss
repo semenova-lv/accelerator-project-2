@@ -11,6 +11,7 @@
   font-size: 16px;
   line-height: 16px;
   padding-inline: 15px;
+  width: fit-content;
 
   @media (min-width: $tablet-width) {
     padding-inline: 30px;
@@ -19,6 +20,10 @@
 
 .field-group:has(.field-group__input:focus) .field-group__control {
   opacity: 0;
+}
+
+.field-group:has(.field-group__input:hover) .field-group__control {
+  cursor: text;
 }
 
 .field-group:has(.field-group__input:disabled) .field-group__control {
@@ -58,7 +63,6 @@
 
   &:not(:disabled):focus {
     border-color: $additional-accent;
-    outline: none;
   }
 
   &:focus::placeholder {

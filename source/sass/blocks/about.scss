@@ -1,11 +1,11 @@
 .about {
-  padding-block: 20px;
+  padding-block: 20px 21px;
   padding-inline: calc((100% - 320px) / 2);
   display: grid;
   grid-template-columns: 1fr;
 
   @media (min-width: $tablet-width) {
-    padding-block: 40px;
+    padding-block: 40px 42px;
     padding-inline: calc((100% - 768px) / 2) calc((100% - 678px) / 2);
     grid-template-columns: 450px 270px;
   }
@@ -58,14 +58,14 @@
     @media (min-width: $tablet-width) {
       font-size: 25px;
       line-height: 25px;
-      margin-bottom: 36px;
+      margin-bottom: 38px;
       padding-block: 20px 10px;
     }
 
     @media (min-width: $desktop-width) {
       font-size: 35px;
       line-height: 35px;
-      margin-bottom: 58px;
+      margin-bottom: 59px;
       padding-block: 45px 0;
     }
   }
@@ -99,16 +99,16 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    row-gap: 25px;
+    row-gap: 27px;
 
-    @media (min-width: $desktop-width) {
-      row-gap: 30px;
+    @media (min-width: $tablet-width) {
+      row-gap: 29px;
     }
   }
 
   h3 {
     margin: 0;
-    margin-bottom: 14px;
+    margin-bottom: 13px;
     font-size: 16px;
     line-height: 16px;
     font-weight: 700;
@@ -116,7 +116,7 @@
     @media (min-width: $tablet-width) {
       font-size: 18px;
       line-height: 18px;
-      margin-bottom: 15px;
+      margin-bottom: 11px;
     }
 
     @media (min-width: $desktop-width) {

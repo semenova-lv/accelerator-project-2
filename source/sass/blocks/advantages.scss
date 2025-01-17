@@ -51,6 +51,7 @@
   }
 
   &::before {
+    top: 5px;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -89,9 +90,10 @@
   flex-direction: column;
   align-items: center;
 
-  @media ($tablet-width <= width <= $desktop-width) {
+  @media ($tablet-width <= width < $desktop-width) {
     max-width: 324px;
     padding: 29px 19px;
+    min-height: 340px;
   }
 
   @media (min-width: $desktop-width) {
@@ -118,7 +120,7 @@
     @media (min-width: $tablet-width) {
       width: 48px;
       height: 48px;
-      margin-bottom: 25px;
+      margin-bottom: 26px;
     }
 
     @media (min-width: $desktop-width) {
@@ -159,11 +161,13 @@
     @media (min-width: $tablet-width) {
       font-size: 16px;
       line-height: 16px;
+      margin-bottom: 14px;
     }
 
     @media (min-width: $desktop-width) {
       font-size: 18px;
       line-height: 18px;
+      margin-bottom: 15px;
     }
   }
 

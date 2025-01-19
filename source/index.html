@@ -187,7 +187,9 @@
                   <div class="tours-card__details-item">
                     <dt class="tours-card__details-subtitle">Сложность:</dt>
                     <dd class="tours-card__details-value tours-card__details-value--stars">
-                      <div class="tours-card__details-stars tours-card__details-stars--four-star" aria-label="4 звезды"></div>
+                      <div class="tours-card__details-stars tours-card__details-stars--four-star">
+                        <span class="visually-hidden">4 звезды</span>
+                      </div>
                     </dd>
                   </div>
                   <div class="tours-card__details-item">
@@ -227,7 +229,9 @@
                   <div class="tours-card__details-item">
                     <dt class="tours-card__details-subtitle">Сложность:</dt>
                     <dd class="tours-card__details-value tours-card__details-value--stars">
-                      <div class="tours-card__details-stars tours-card__details-stars--three-star" aria-label="3 звезды"></div>
+                      <div class="tours-card__details-stars tours-card__details-stars--three-star">
+                        <span class="visually-hidden">3 звезды</span>
+                      </div>
                     </dd>
                   </div>
                   <div class="tours-card__details-item">
@@ -267,7 +271,9 @@
                   <div class="tours-card__details-item">
                     <dt class="tours-card__details-subtitle">Сложность:</dt>
                     <dd class="tours-card__details-value tours-card__details-value--stars">
-                      <div class="tours-card__details-stars tours-card__details-stars--four-star" aria-label="4 звезды"></div>
+                      <div class="tours-card__details-stars tours-card__details-stars--four-star">
+                        <span class="visually-hidden">4 звезды</span>
+                      </div>
                     </dd>
                   </div>
                   <div class="tours-card__details-item">
@@ -307,7 +313,9 @@
                   <div class="tours-card__details-item">
                     <dt class="tours-card__details-subtitle">Сложность:</dt>
                     <dd class="tours-card__details-value tours-card__details-value--stars">
-                      <div class="tours-card__details-stars tours-card__details-stars--five-star" aria-label="5 звезд"></div>
+                      <div class="tours-card__details-stars tours-card__details-stars--five-star">
+                        <span class="visually-hidden">5 звезд</span>
+                      </div>
                     </dd>
                   </div>
                   <div class="tours-card__details-item">
@@ -691,15 +699,14 @@
           <h2>Остались вопросы?</h2>
           <p>Заполните форму и наш оператор свяжется<br> с вами для консультации.</p>
         </div>
-
         <form action="https://echo.htmlacademy.ru" method="post" novalidate>
           <p class="form-feedback__field-group field-group">
             <label class="field-group__control" for="phone">Телефон</label>
-            <input class="field-group__input" type="tel" id="phone" name="phone" placeholder="+7 (000)-000-00-00" pattern="\+?[0-9\s\-\(\)]+" required title="Введите корректный номер телефона, без букв">
+            <input class="field-group__input" type="tel" id="phone" name="phone" placeholder="+7 (000)-000-00-00" required>
           </p>
           <p class="form-feedback__field-group field-group">
             <label class="field-group__control" for="email">Email</label>
-            <input class="field-group__input" type="email" id="email" name="email" placeholder="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Zа-яА-Я]{2,}" required title="Введите корректный email">
+            <input class="field-group__input" type="text" id="email" name="email" placeholder="example@example.com" required>
           </p>
           <button class="form-feedback__button button button--primary" type="submit">Отправить</button>
         </form>

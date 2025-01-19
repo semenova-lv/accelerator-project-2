@@ -94,8 +94,6 @@
   box-shadow: 0 0 20px 0 rgba(28, 51, 116, 0.1);
   padding: 20px;
   background-color: $white;
-
-  // padding-bottom: 17px;
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 19px;
@@ -126,10 +124,6 @@
   img {
     display: block;
   }
-}
-
-.reviews__information {
-
 }
 
 .reviews__text-content {

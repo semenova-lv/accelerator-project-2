@@ -22,8 +22,6 @@
 .gallery__title {
   margin: 0;
   margin-bottom: 10px;
-
-  // padding-inline: 15px;
   margin-inline: 15px;
 
   @media (min-width: $tablet-width) {
@@ -82,10 +80,6 @@
     align-self: flex-end;
     padding-inline: 45px;
   }
-}
-
-.gallery__button {
-
 }
 
 .gallery__slider {

@@ -130,10 +130,6 @@
   }
 }
 
-.training__button {
-
-}
-
 .training__slider {
   width: 100%;
 }
@@ -198,7 +194,6 @@
   }
 
   @media (min-width: $desktop-width) {
-    // grid-template-columns: 243px 243px 243px 1fr;
     grid-template-columns: repeat(4, 243px);
     gap: 0 10px;
   }

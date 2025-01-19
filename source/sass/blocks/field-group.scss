@@ -16,6 +16,10 @@
   @media (min-width: $tablet-width) {
     padding-inline: 30px;
   }
+
+  &--hidden {
+    opacity: 0;
+  }
 }
 
 .field-group:has(.field-group__input:focus) .field-group__control {
@@ -77,4 +81,3 @@
     border-color: $color-disabled;
   }
 }
-

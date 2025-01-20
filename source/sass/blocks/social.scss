@@ -22,7 +22,7 @@
     content: "";
     width: 16px;
     height: 16px;
-    background-color: $additional-accent;
+    background-color: $basic-primary;
     mask-position: center;
     mask-repeat: no-repeat;
     mask-size: contain;
@@ -44,7 +44,7 @@
   }
 
   &:hover {
-    border-color: $additional-accent;
+    border-color: $basic-primary;
     transition: border-color 0.4s ease;
   }
 

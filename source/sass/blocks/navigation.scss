@@ -16,6 +16,7 @@
   background-position: center;
   background-size: 26px 20px;
   cursor: pointer;
+  transition: opacity 0.2s ease;
 
   &--open {
     background-image: url("/__spritemap#sprite-icon-cross-view");
@@ -29,6 +30,7 @@
 
   &:not(:disabled):hover {
     opacity: 0.7;
+    transition: opacity 0.4s ease;
   }
 
   &:not(:disabled):active {

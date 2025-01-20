@@ -29,6 +29,8 @@
 
   img {
     object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 }
 
@@ -36,17 +38,19 @@
   grid-area: 1 / 1;
   align-self: flex-end;
   padding: 30px 20px;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: end;
   gap: 15px;
   z-index: 3;
+  box-sizing: border-box;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 .tours-card__information {
   display: flex;
-
   gap: 12px 4px;
-
   justify-content: space-between;
   margin-bottom: 1px;
   flex-wrap: wrap;
@@ -149,6 +153,7 @@
   display: flex;
   justify-content: space-between;
   gap: 5px;
+  flex-wrap: wrap;
 }
 
 .tours-card__details-item {

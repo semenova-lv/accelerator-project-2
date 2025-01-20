@@ -27,6 +27,7 @@
 
   @media (min-width: $desktop-width) {
     grid-template-columns: 205px 1fr 157px;
+    column-gap: 30px;
     align-items: center;
   }
 }
@@ -65,10 +66,12 @@
   font-size: 14px;
   line-height: 14px;
   font-weight: 600;
+  transition: color 0.2s ease;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
     line-height: 16px;
+    grid-column: 3;
   }
 
   @media (min-width: $desktop-width) {
@@ -78,9 +81,11 @@
 
   &:hover {
     color: rgba(255, 255, 255, 0.5);
+    transition: color 0.4s ease;
   }
 
   &:focus-visible {
+    outline: none;
     color: $additional-accent;
   }
 
@@ -88,7 +93,7 @@
     color: $basic-accent;
   }
 
-  &:disabled {
+  &--disabled {
     color: $color-disabled;
     cursor: default;
     pointer-events: none;

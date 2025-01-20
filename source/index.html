@@ -700,15 +700,19 @@
           <p>Заполните форму и наш оператор свяжется<br> с вами для консультации.</p>
         </div>
         <form action="https://echo.htmlacademy.ru" method="post" novalidate>
-          <p class="form-feedback__field-group field-group">
-            <label class="field-group__control" for="phone">Телефон</label>
-            <input class="field-group__input" type="tel" id="phone" name="phone" placeholder="+7 (000)-000-00-00" required>
-          </p>
-          <p class="form-feedback__field-group field-group">
-            <label class="field-group__control" for="email">Email</label>
-            <input class="field-group__input" type="text" id="email" name="email" placeholder="example@example.com" required>
-          </p>
-          <button class="form-feedback__button button button--primary" type="submit">Отправить</button>
+          <div class="form-feedback__wrapper-inputs">
+            <p class="form-feedback__field-group field-group">
+              <label class="field-group__control" for="phone">Телефон</label>
+              <input class="field-group__input" type="tel" id="phone" name="phone" placeholder="+7 (000)-000-00-00" required>
+            </p>
+            <p class="form-feedback__field-group field-group">
+              <label class="field-group__control" for="email">Email</label>
+              <input class="field-group__input" type="text" id="email" name="email" placeholder="example@example.com" required>
+            </p>
+          </div>
+          <div class="form-feedback__wrapper-buttons">
+            <button class="form-feedback__button button button--primary" type="submit">Отправить</button>
+          </div>
         </form>
       </div>
 
@@ -773,7 +777,9 @@
           <a class="footer-navigation__link" href="#contacts">Контакты</a>
         </li>
       </ul>
-      <a class="page-footer__link" href="tel:88007253232">8 800 725-32-32</a>
+      <p class="page-footer__tel">
+        <a class="page-footer__link" href="tel:88007253232">8 800 725-32-32</a>
+      </p>
 
       <section class="page-footer__social social">
         <h2 class="visually-hidden">Социальные сети</h2>

@@ -15,10 +15,10 @@ const heroSlider = new Swiper('.hero__slider', {
     renderBullet: (index, className) => `<button class="${className}" type="button" data-index="${index}"><span class="visually-hidden">Слайд ${index + 1}</span></button>`,
   },
 
-  allowTouchMove: true, // Свайп включен для всех устройств
+  allowTouchMove: true,
   breakpoints: {
     1440: {
-      allowTouchMove: false, // Отключаем свайп на десктопе
+      allowTouchMove: false,
     },
   },
 });
@@ -94,4 +94,3 @@ heroSlider.init();
 toursSlider.init();
 trainersSlider.init();
 reviewsSlider.init();
-

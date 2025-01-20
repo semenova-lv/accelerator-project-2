@@ -99,8 +99,11 @@
   letter-spacing: 0.04em;
   padding: 10px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 7px;
+  align-items: center;
   gap: 12px;
+  transition: color 0.2s ease;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -124,6 +127,7 @@
 
   &:not(:disabled):hover {
     color: rgba(2, 102, 193, 0.1);
+    transition: color 0.4s ease;
   }
 
   &:not(:disabled):focus-visible {

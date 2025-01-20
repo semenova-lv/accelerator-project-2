@@ -1,5 +1,6 @@
 .hero .hero__slider {
   width: 320px;
+  margin: 0 auto;
 
   @media (min-width: $tablet-width) {
     width: 768px;
@@ -176,6 +177,10 @@
   @media (min-width: $desktop-width) {
     text-align: center;
   }
+
+  &:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
 }
 
 .hero__details {
@@ -184,9 +189,11 @@
   @media (min-width: $desktop-width) {
     margin: 0;
     margin-top: 20px;
+    max-width: 950px;
     padding: 0;
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: flex-end;
     flex-grow: 1;

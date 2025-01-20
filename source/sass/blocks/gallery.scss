@@ -91,7 +91,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    height: 463px;
+    height: auto;
   }
 }
 
@@ -123,6 +123,7 @@
   @media (min-width: $desktop-width) {
     max-width: 284px;
     grid-template-rows: 233px 223px;
+    height: auto;
   }
 }
 

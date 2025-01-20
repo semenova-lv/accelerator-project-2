@@ -55,5 +55,6 @@
 
   &:disabled {
     background-color: $color-disabled;
+    pointer-events: none;
   }
 }

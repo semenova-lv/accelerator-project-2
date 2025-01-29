@@ -1,0 +1,83 @@
+.field-group {
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+
+.field-group__control {
+  grid-area: 1 / 1;
+  z-index: 3;
+  color: rgba(45, 56, 63, 0.5);
+  font-size: 16px;
+  line-height: 16px;
+  padding-inline: 15px;
+  width: fit-content;
+
+  @media (min-width: $tablet-width) {
+    padding-inline: 30px;
+  }
+
+  &--hidden {
+    opacity: 0;
+  }
+}
+
+.field-group:has(.field-group__input:focus) .field-group__control {
+  opacity: 0;
+}
+
+.field-group:has(.field-group__input:hover) .field-group__control {
+  cursor: text;
+}
+
+.field-group:has(.field-group__input:disabled) .field-group__control {
+  color: $color-disabled;
+}
+
+.field-group__input {
+  grid-area: 1 / 1;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 16px;
+  background-color: $white;
+  color: rgba(45, 56, 63, 0.5);
+  padding: 17px 15px;
+  border: 1px solid rgba(2, 102, 193, 0.1);
+  border-radius: 2px;
+  box-sizing: border-box;
+  height: 50px;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    padding: 20px 30px;
+    height: 56px;
+  }
+
+  &::placeholder {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 16px;
+    color: rgba(45, 56, 63, 0.5);
+    opacity: 0;
+  }
+
+  &:not(:disabled):hover {
+    border-color: $basic-secondary;
+  }
+
+  &:not(:disabled):focus {
+    border-color: $basic-primary;
+  }
+
+  &:focus::placeholder {
+    opacity: 1;
+  }
+
+  &--invalid {
+    border-color: $color-error;
+  }
+
+  &:disabled {
+    border-color: $color-disabled;
+  }
+}

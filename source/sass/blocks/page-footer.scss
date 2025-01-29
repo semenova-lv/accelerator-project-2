@@ -1,0 +1,119 @@
+.page-footer__content {
+  padding-block: 23px 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 23px;
+  justify-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 34px 20px;
+    grid-template-columns: 142px 1fr;
+    gap: 34px 30px;
+    align-items: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-block: 32px;
+    grid-template-columns: 200px 1fr 200px;
+    row-gap: 22px;
+  }
+}
+
+.page-footer__logo {
+  height: 42px;
+
+  @media (min-width: $desktop-width) {
+    padding-block: 9px;
+  }
+}
+
+.page-footer__navigation-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    justify-self: flex-end;
+  }
+
+  @media (min-width: $desktop-width) {
+    justify-self: center;
+  }
+}
+
+.page-footer__tel {
+  margin: 0;
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    justify-self: flex-end;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+  }
+}
+
+.page-footer__link {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease;
+
+
+  &:hover {
+    color: rgba(2, 102, 193, 0.1);
+    transition: color 0.4s ease;
+  }
+
+  &:focus-visible {
+    outline: none;
+    color: $basic-secondary;
+  }
+
+  &:active {
+    color: $basic-accent;
+  }
+
+  &--disabled {
+    color: $color-disabled;
+    pointer-events: none;
+  }
+}
+
+.page-footer__social {
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+  }
+}
+
+.page-footer__privacy-policy {
+  margin: 0;
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 300;
+
+  @media (min-width: $tablet-width) {
+    grid-column: 1 / -1;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.2s ease;
+  }
+
+  a:hover {
+    color: rgba(2, 102, 193, 0.1);
+    transition: color 0.4s ease;
+  }
+
+  a:focus-visible {
+    color: $basic-secondary;
+  }
+
+  a:active {
+    color: $basic-accent;
+  }
+}

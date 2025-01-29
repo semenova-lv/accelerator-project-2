@@ -1,0 +1,114 @@
+.site-list {
+  background-color: $basic-secondary;
+  padding-block: 15px 50px;
+  flex-direction: column;
+  row-gap: 22px;
+
+  @media (min-width: $tablet-width) {
+    padding-block: 30px 70px;
+    row-gap: 26px;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding-block: 0;
+  }
+}
+
+.site-list__item {
+  padding-inline: calc((100% - 290px) / 2);
+
+  @media (min-width: $tablet-width) {
+    padding-inline: calc((100% - 678px) / 2);
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-inline: 0;
+    font-weight: 400;
+  }
+}
+
+.site-list__link {
+  text-decoration: none;
+  color: inherit;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  display: block;
+  width: fit-content;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 16px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-weight: 400;
+    text-transform: capitalize;
+    letter-spacing: 0;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -10px;
+    top: -10px;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    bottom: -3px;
+    height: 1px;
+    background-color: currentColor;
+    transition: left 0.2s ease, right 0.2s ease;
+  }
+
+  &:hover::after {
+    left: -5px;
+    right: -5px;
+    transition: left 0.4s ease, right 0.4s ease;
+  }
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -5px;
+    right: -5px;
+    bottom: -3px;
+    top: -3px;
+    outline: 1px solid currentColor;
+    outline-offset: -1px;
+  }
+
+  &:active {
+    color: $basic-accent;
+  }
+
+  &:active::after {
+    display: none;
+  }
+
+  &--disabled {
+    color: $color-disabled;
+    cursor: default;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,44 @@
+.title {
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 800;
+  padding-block: 16px 17px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 25px;
+    line-height: 25px;
+
+    padding-block: 20px 10px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 35px;
+    line-height: 35px;
+
+    padding-block: 20px 0;
+  }
+
+  &::before {
+    content: attr(data-title);
+    display: block;
+    font-size: 26px;
+    line-height: 26px;
+    opacity: 0.03;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      font-size: 40px;
+      line-height: 40px;
+      top: 5px;
+    }
+
+    @media (min-width: $desktop-width) {
+      font-size: 55px;
+      line-height: 55px;
+      top: 0;
+    }
+  }
+}

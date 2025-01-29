@@ -1,0 +1,48 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  min-height: 100%;
+  font-family: $font-famyly;
+  color: $basic-primary;
+  background-color: $white;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (width <= $desktop-width) {
+    &--overlay {
+      overflow: hidden;
+    }
+
+    &--overlay::after {
+      content: "";
+      display: block;
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      z-index: 2;
+      background-color: rgba(45, 56, 63, 0.6);
+    }
+  }
+}
+
+.page__body-main {
+  flex-grow: 1;
+}

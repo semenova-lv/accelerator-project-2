@@ -1,0 +1,69 @@
+.social__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.social__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(45, 56, 63, 0.3);
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+
+  &::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: $basic-primary;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+  }
+
+  &--vk::before {
+    mask-image: url("/__spritemap#sprite-icon-vk-view");
+    mask-size: 16px 9px;
+  }
+
+  &--ok::before {
+    mask-image: url("/__spritemap#sprite-icon-ok-view");
+    mask-size: 9px 16px;
+  }
+
+  &--reddit::before {
+    mask-image: url("/__spritemap#sprite-icon-reddit-view");
+    mask-size: 14px 15px;
+  }
+
+  &:hover {
+    border-color: $basic-primary;
+    transition: border-color 0.4s ease;
+  }
+
+  &:focus-visible {
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    border: none;
+    background-color: $basic-secondary;
+  }
+
+  &:active::before {
+    background-color: $white;
+  }
+
+  &--disabled {
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
